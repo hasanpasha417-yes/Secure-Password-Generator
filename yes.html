@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Password Generator</title>
+  <link rel="stylesheet" href="yes.css" />
+  <link rel="icon"type="image/x-icon"href="faicon.ico"/>
+</head>
+<body>
+  <div class="container">
+    
+    <h1>🔐 Secure Password Generator</h1>
+
+    <label>Password Length:</label>
+    <input type="number" id="length" min="8" max="32" value="16" />
+
+    <div class="options">
+      <label><input type="checkbox" id="uppercase" checked /> Uppercase</label>
+      <label><input type="checkbox" id="lowercase" checked /> Lowercase</label>
+      <label><input type="checkbox" id="numbers" checked /> Numbers</label>
+      <label><input type="checkbox" id="symbols" checked /> Symbols</label>
+      <label><input type="checkbox" id="noAmbiguous" /> Avoid Ambiguous (O,0,l,1)</label>
+    </div>
+
+    <button onclick="generatePassword()">🎬 Generate Password</button>
+
+    <div class="output-group">
+      <input type="text" id="output" readonly />
+      <button onclick="toggleVisibility()">👁️</button>
+      <button onclick="copyPassword()">📋 Copy</button>
+    </div>
+
+    <div class="strength">
+      <label>Password Strength:</label>
+      <div id="strengthBar"></div>
+    </div>
+
+   
+  </div>
+
+  <div id="toast"></div>
+  <script src="yes.js"></script>
+</body>
+</html>
